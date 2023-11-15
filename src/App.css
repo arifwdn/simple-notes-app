@@ -1,0 +1,16 @@
+input,
+textarea,
+button {
+  background-color: #242424;
+  color: rgb(171, 171, 171);
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px rgb(171, 171, 171);
+}
+.notes-app_header {
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px rgb(171, 171, 171);
+}

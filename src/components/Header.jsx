@@ -1,10 +1,10 @@
-const Navbar = () => {
+const Header = () => {
   return (
-    <nav>
+    <nav className="notes-app_header">
       <h1>Notes</h1>
       <input type="text" placeholder="Cari catatan..." />
     </nav>
   );
 };
 
-export default Navbar;
+export default Header;
