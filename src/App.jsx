@@ -1,17 +1,21 @@
-import { useState } from "react";
 import "./App.css";
+import Navbar from "./Components/Navbar";
+import FormNotes from "./Components/FormNotes";
+import ListNotes from "./Components/ListNotes";
+import Notes from "./Components/Notes";
 
 function App() {
   return (
     <>
-      <nav>
-        <h1>Notes</h1>
-        <input type="text" placeholder="Cari catatan..." />
-      </nav>
+      <Navbar />
       <main>
-        <section>GUYDJHAWBDJ</section>
-        <section>Catatan Aktif</section>
-        <section>Arsip</section>
+        <FormNotes />
+        <ListNotes title="Catatan Aktif" />
+        <ListNotes title="Arsip">
+          <Notes />
+          <Notes />
+          <Notes />
+        </ListNotes>
       </main>
     </>
   );
