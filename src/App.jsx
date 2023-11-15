@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import FormNotes from "./Components/FormNotes";
 import ListNotes from "./Components/ListNotes";
 import Notes from "./Components/Notes";
+=======
+import "./app.css";
+import Header from "./components/Header";
+>>>>>>> ulang
 
-function App() {
+const App = () => {
   return (
     <>
+<<<<<<< HEAD
       <Navbar />
       <main>
         <FormNotes />
@@ -17,8 +23,11 @@ function App() {
           <Notes />
         </ListNotes>
       </main>
+=======
+      <Header />
+>>>>>>> ulang
     </>
   );
-}
+};
 
 export default App;

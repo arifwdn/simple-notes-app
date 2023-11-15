@@ -1,26 +1,18 @@
-nav {
-  border-bottom: solid white 1px;
+input,
+textarea,
+button {
   background-color: #242424;
+  color: rgb(171, 171, 171);
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px rgb(171, 171, 171);
+}
+.notes-app_header {
+  padding: 0px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
-  position: sticky;
-  top: 0;
-}
-
-nav > input[type="text"] {
-  min-width: 250px;
-  height: 30px;
-  outline: none;
-  border: solid 1px white;
-  border-radius: 5px;
-  background-color: #242424;
-  padding: 5px;
-}
-
-nav > input[type="text"]:focus {
-  box-shadow: 1px 1px 3px white;
+  border-bottom: solid 1px rgb(171, 171, 171);
 }
 
 main {
