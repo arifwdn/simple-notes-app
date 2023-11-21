@@ -6,7 +6,9 @@ button {
   padding: 10px;
   border-radius: 5px;
   border: solid 1px rgb(171, 171, 171);
+  font-weight: bold;
 }
+
 .notes-app_header {
   padding: 0px 10px;
   display: flex;
@@ -15,70 +17,39 @@ button {
   border-bottom: solid 1px rgb(171, 171, 171);
 }
 
-main {
-  margin: auto;
-  padding: 0px 20px;
-}
-
-.form-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-container > p {
-  text-align: right;
-}
-
-.form-container > form {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  gap: 10px;
-}
-
-.form-container > form > input {
-  padding: 10px;
-  border: solid 1px white;
-  background-color: #242424;
-}
-
-.form-container > form > textarea {
-  resize: none;
-  padding: 10px;
-  border: solid 1px white;
-  background-color: #242424;
-}
-
-.form-container > form > button {
-  padding: 10px;
-  outline: none;
-  border: solid 1px white;
-  background-color: #242424;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.card-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card-container::after {
-  content: "";
-  flex-basis: 370px;
-}
-
-.card {
-  flex-basis: 350px;
-  padding: 10px;
-  padding-top: 0px;
-  border: solid 1px white;
-  border-radius: 5px;
-}
-.card > h3 {
+.notes-app_form {
   display: block;
-  margin-top: 5px;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+}
+
+.notes-app_form > p {
+  text-align: right;
+  font-weight: 500;
+}
+
+.notes-app_form > form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.notes-app_form > form > textarea {
+  resize: none;
+  height: 180px;
+  font-weight: normal;
+}
+
+.notes-app_form > form > button {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 400px) {
+  .notes-app_form {
+    max-width: 100%;
+    margin: 10px;
+  }
 }

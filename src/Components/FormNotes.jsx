@@ -1,14 +1,14 @@
 const FormNotes = () => {
   return (
-    <section className="form-container">
+    <div className="notes-app_form">
       <h2>Buat Catatan</h2>
       <p>Sisa Karakter : 50</p>
       <form>
         <input type="text" placeholder="Ini adalah judul..." />
-        <textarea rows="13" placeholder="Tulis catatanmu disini..."></textarea>
+        <textarea placeholder="Tuliskan catatanmu disini..."></textarea>
         <button type="submit">Buat</button>
       </form>
-    </section>
+    </div>
   );
 };
 
