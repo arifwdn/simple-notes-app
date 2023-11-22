@@ -1,4 +1,12 @@
-const CardNote = ({ noteid, title, body, created }) => {
+const CardNote = ({
+  title,
+  body,
+  created,
+  archived,
+  handledelete,
+  handlearchive,
+  noteid,
+}) => {
   return (
     <div className="notes-app_card">
       <div className="notes-app_card-body">
@@ -7,8 +15,12 @@ const CardNote = ({ noteid, title, body, created }) => {
         <p>{body}</p>
       </div>
       <div className="notes-app_card-action">
-        <button>Delete</button>
-        <button>Arsipkan</button>
+        <button data-id={noteid} onClick={handledelete}>
+          Hapus
+        </button>
+        <button data-id={noteid} onClick={handlearchive}>
+          {archived ? "Pindahkan" : "Arsipkan"}
+        </button>
       </div>
     </div>
   );

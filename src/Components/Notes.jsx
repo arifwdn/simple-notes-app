@@ -1,7 +1,14 @@
 import CardNote from "./CardNote";
 import { showFormattedDate } from "../utils/datas";
 
-const Notes = ({ title, data, archived, search }) => {
+const Notes = ({
+  title,
+  data,
+  archived,
+  search,
+  handledelete,
+  handlearchive,
+}) => {
   const showCard = (datas) => {
     let tempData = datas.filter((dt) => {
       let title = dt.title.toLowerCase();
@@ -17,10 +24,13 @@ const Notes = ({ title, data, archived, search }) => {
         return (
           <CardNote
             key={dt.id}
-            noteid={dt.id}
             title={dt.title}
             body={dt.body}
+            archived={dt.archived}
             created={showFormattedDate(dt.createdAt)}
+            handledelete={handledelete}
+            handlearchive={handlearchive}
+            noteid={dt.id}
           />
         );
       });

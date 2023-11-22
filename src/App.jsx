@@ -33,9 +33,28 @@ const App = () => {
       archived,
       createdAt,
     };
+    // First Method
     setData((data) => [...data, obj]);
+    // Second Method
+    // data.push(obj);s
     setTitle("");
     e.target[1].value = "";
+  };
+
+  const handleDelete = (e) => {
+    const id = parseInt(e.target.dataset.id);
+    //First Method
+    // const index = data.findIndex((dt) => dt.id === id);
+    // setData([...data.slice(0, index), ...data.slice(index + 1, data.length)]);
+    //Second Method
+    setData(data.filter((dt) => dt.id !== id));
+  };
+  const handleArchive = (e) => {
+    const id = parseInt(e.target.dataset.id);
+    const nextNote = [...data];
+    const note = nextNote.find((dt) => dt.id === id);
+    note.archived = !note.archived;
+    setData(nextNote);
   };
 
   return (
@@ -52,7 +71,7 @@ const App = () => {
         archived={false}
         search={search}
         handledelete={handleDelete}
-        handlearchived={handleArchived}
+        handlearchive={handleArchive}
       />
       <Notes
         title="Arsip"
@@ -60,7 +79,7 @@ const App = () => {
         archived={true}
         search={search}
         handledelete={handleDelete}
-        handlearchived={handleArchived}
+        handlearchive={handleArchive}
       />
     </>
   );
